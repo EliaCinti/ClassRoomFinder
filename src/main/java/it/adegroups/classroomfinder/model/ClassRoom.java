@@ -8,6 +8,13 @@ public class ClassRoom {
     private boolean lecture;
     private LocalTime time;
 
+    public ClassRoom(String room, DaysOfWeek days, boolean lecture, LocalTime time) {
+        setRoom(room);
+        setDays(days);
+        setLecture(lecture);
+        setTime(time);
+    }
+
     public String getRoom() {
         return room;
     }
