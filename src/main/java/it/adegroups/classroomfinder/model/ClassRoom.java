@@ -1,5 +1,7 @@
 package it.adegroups.classroomfinder.model;
 
+import it.adegroups.classroomfinder.bean.ClassRoomBean;
+
 import java.time.LocalTime;
 
 public class ClassRoom {
@@ -13,6 +15,13 @@ public class ClassRoom {
         setDays(days);
         setLecture(lecture);
         setTime(time);
+    }
+
+    public ClassRoom(ClassRoomBean classRoomBean) {
+        setRoom(classRoomBean.getRoom());
+        setDays(classRoomBean.getDay());
+        setLecture(classRoomBean.isLecture());
+        setTime(classRoomBean.getTime());
     }
 
     public String getRoom() {

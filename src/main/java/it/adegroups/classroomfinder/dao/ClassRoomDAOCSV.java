@@ -21,7 +21,7 @@ public class ClassRoomDAOCSV implements ClassRoomDAO {
         try (CSVWriter writer = new CSVWriter(new FileWriter(fd, true))) {
             String[] classRoomRecord = new String[5];
             classRoomRecord[ClassRoomAttributesOrder.INDEX_ROOM] = classRoom.getRoom();
-            classRoomRecord[ClassRoomAttributesOrder.INDEX_DAY] = classRoom.getDays().toString();
+            classRoomRecord[ClassRoomAttributesOrder.INDEX_DAY] = classRoom.getDays().name();
             classRoomRecord[ClassRoomAttributesOrder.INDEX_LECTURE] = String.valueOf(classRoom.isLecture());
             classRoomRecord[ClassRoomAttributesOrder.INDEX_HOUR] = String.valueOf(classRoom.getTime().getHour());
             classRoomRecord[ClassRoomAttributesOrder.INDEX_MINUTES] = String.valueOf(classRoom.getTime().getMinute());
